@@ -8,7 +8,7 @@ function App() {
 	const { getData, user, posts } = useContext(Context);
 
 	useEffect(() => {
-		getData(userId);
+		userId !== 0 && getData(userId);
 	}, [userId]);
 
 	return (
@@ -20,12 +20,13 @@ function App() {
 				placeholder="Enter the user id"
 			/>
 			<div>
-				<h5>{JSON.stringify(user, null, 4)}</h5>
+				<h5>{userId !== 0 && JSON.stringify(user, null, 4)}</h5>
 			</div>
 			<div>
-				{posts.map((post) => (
-					<h4>{JSON.stringify(post, null, 4)}</h4>
-				))}
+				{userId !== 0 &&
+					posts.map((post, index) => (
+						<h4 key={index}>{JSON.stringify(post, null, 4)}</h4>
+					))}
 			</div>
 		</div>
 	);
