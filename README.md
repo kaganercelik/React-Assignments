@@ -1,3 +1,3 @@
 ## React Assignments for my Patike Dev
 
-## [Patika Adresim](https://app.patika.dev/fuujazz)
+## [My Patika Link](https://app.patika.dev/fuujazz)
